@@ -1,3 +1,12 @@
+ const express = require('express');
+const app = express();
+const PORT = process.env.PORT || 3000;
+
+app.get('/', (req, res) => res.send('Bot Policía activo 24/7 🚓'));
+app.listen(PORT, () => {
+  console.log(`Servidor web activado en el puerto ${PORT}`);
+});
+
 const { 
     Client, 
     GatewayIntentBits, 
@@ -18,8 +27,7 @@ const client = new Client({
 });
 
 // Coloca tu Token de Discord aquí
-const TOKEN = 'MTUzNTg4OTI2OTA0MDg3MzU4Mw.Gp00GB._GaArSbrOzifQP4uppGiqW9liTDK4HSXwpPGnI';
-
+const TOKEN = process.env.TOKEN;
 // ID del canal donde llegarán las postulaciones para revisiones
 const CANAL_REVISIONES_ID = '1535904737508069386';
 
