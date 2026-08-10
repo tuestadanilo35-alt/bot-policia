@@ -314,4 +314,4 @@ client.on('interactionCreate', async (interaction) => {
     }
 });
 
-client.login(process.env.TOKEN);
+client.login(TOKEN).catch(err => console.error("❌ ERROR AL CONECTAR EL BOT:", err));
