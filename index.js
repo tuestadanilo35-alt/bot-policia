@@ -110,7 +110,7 @@ client.on('interactionCreate', async (interaction) => {
             const thread = await interaction.channel.threads.create({
                 name: `postulacion-${usuario.username}`,
                 autoArchiveDuration: ThreadAutoArchiveDuration.OneHour,
-                type: ChannelType.PrivateThread,
+                type: ChannelType.PublicThread,
                 reason: `Postulación a Policía Federal de ${usuario.tag}`,
             });
 
@@ -127,7 +127,7 @@ client.on('interactionCreate', async (interaction) => {
                 .setColor(0x00FF88);
 
             await thread.send({ embeds: [embedInicio] });
-
+            await interaction.editReply({ content: `✅ ¡Postulación iniciada! Ve a tu hilo: ${thread}` });
             const respuestas = [];
 
             // Preguntas paso a paso
