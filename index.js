@@ -27,7 +27,7 @@ const client = new Client({
 });
 
 // Coloca tu Token de Discord aquí
-const TOKEN = 'MTUzNTg4OTI2OTA0MDg3MzU4Mw.GKv1uL.ExMsedgu9sXohzEX0o15VkOvYskpD9hjJdhRdI';
+const TOKEN = 'MTUzNTg4OTI2OTA0MDg3MzU4Mw.G4zQrK.cON0tdzmXQ-8LtckLkD_ZedZIv7nI3rgtOHToE';
 // ID del canal donde llegarán las postulaciones para revisiones
 const CANAL_REVISIONES_ID = '1536124979601604638';
 
