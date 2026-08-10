@@ -99,10 +99,11 @@ client.on('interactionCreate', async (interaction) => {
     // --- INICIAR POSTULACIÓN ---
     if (interaction.customId === 'iniciar_postulacion_pf') {
         const usuario = interaction.user;
+     await interaction.deferReply({ ephemeral: true });
 
-        await interaction.reply({
+        await interaction.editReply({
             content: '⏳ Creando tu hilo de postulación privado...',
-            ephemeral: true 
+            
         });
 
         try {
