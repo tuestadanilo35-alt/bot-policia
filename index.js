@@ -314,4 +314,11 @@ client.on('interactionCreate', async (interaction) => {
     }
 });
 
-client.login(TOKEN).catch(err => console.error("❌ ERROR AL CONECTAR EL BOT:", err));
+if (!TOKEN) {
+    console.error("❌ ERROR CRÍTICO: No se encontró la variable TOKEN.");
+} else {
+    console.log("🔑 Intentando iniciar sesión con el TOKEN...");
+    client.login(TOKEN)
+        .then(() => console.log("🤖 ¡BOT CONECTADO EXITOSAMENTE!"))
+        .catch(err => console.error("❌ ERROR AL CONECTAR EL BOT:", err));
+}
